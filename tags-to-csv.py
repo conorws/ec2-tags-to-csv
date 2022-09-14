@@ -25,7 +25,7 @@ def get_instances(filters=[]):
             Filters=filters
         )
     except botocore.exceptions.ClientError as e:
-        print e.response['Error']['Message']
+        print(e.response['Error']['Message'])
 
     instances = []
     for reservation in reservations.get('Reservations', []):
